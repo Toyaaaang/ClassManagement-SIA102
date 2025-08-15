@@ -8,7 +8,7 @@ const users = [
     { id: 3, lastName: 'Johnson', firstName: 'Alice', section: 'BSIT-4C', status: 'present' }
 ];
 app.get('/',(req,res) =>{
-    res.send('Welcome to the Class Management System');
+    res.send('Server is up and running! <br>Welcome to the Class Management System');
 }); 
 
 app.listen(PORT,()=> {
@@ -59,3 +59,4 @@ app.post('/users', (req, res) => {
 });
 
 module.exports = app; 
+
