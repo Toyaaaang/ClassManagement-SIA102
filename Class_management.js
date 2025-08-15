@@ -15,8 +15,8 @@ app.listen(PORT,()=> {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-app.get('/user', (req, res) => {
-    console.log('GET request received at /users');
+app.post('/user', (req, res) => {
+    console.log('POST request received at /users');
     const { firstName, lastName, section, status } = req.body;
     const userIndex = users.findIndex(user => user.lastName === lastName && user.firstName === firstName);
     if (userIndex !== -1) {
@@ -59,5 +59,6 @@ app.post('/users', (req, res) => {
 });
 
 module.exports = app; 
+
 
 
